@@ -1,0 +1,20 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module example ! in 
+    interface  ! in :example
+        module foo ! in :example:f2py_example2.f90
+            subroutine f1(x) ! in :example:f2py_example2.f90:foo
+                real :: x
+            end subroutine f1
+            subroutine f2(x) ! in :example:f2py_example2.f90:foo
+                real dimension(:) :: x
+            end subroutine f2
+            subroutine fun ! in :example:f2py_example2.f90:foo
+            end subroutine fun
+        end module foo
+    end interface 
+end python module example
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
